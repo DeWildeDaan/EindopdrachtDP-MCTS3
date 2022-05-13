@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectDaanDeWilde.Views.NoNetworkPage"
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#f0f2f0" >
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="ProjectDaanDeWilde.Assets.nowifi.png"/>
+            <Label TextColor="#1c2606" Text="Please connect to the internet to use this app." VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Medium" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

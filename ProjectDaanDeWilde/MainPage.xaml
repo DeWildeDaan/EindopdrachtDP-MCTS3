@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="ProjectDaanDeWilde.MainPage"
+			 NavigationPage.HasNavigationBar="False" BackgroundColor="#f0f2f0">
+
+    <StackLayout Margin="8" >
+        <Button x:Name="btnMap" Grid.Row="0"  Text="Map" FontSize="Header" TextColor="#f0f2f0" BackgroundColor="#6c735d" VerticalOptions="FillAndExpand"/>
+        <Button x:Name="btnList" Grid.Row="0"  Text="List" FontSize="Header" TextColor="#f0f2f0" BackgroundColor="#6c735d" VerticalOptions="FillAndExpand"/>
+    </StackLayout>
+</ContentPage>

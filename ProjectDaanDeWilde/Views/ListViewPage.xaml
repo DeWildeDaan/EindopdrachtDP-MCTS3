@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectDaanDeWilde.Views.ListViewPage"
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#f0f2f0">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvwChargePoints" RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start">
+                                    <Label VerticalOptions="Center" HorizontalOptions="Start" FontSize="Medium" TextColor="#1c2606" Margin="8, 0, 0, 0" Text="{Binding AddressInfo.Name}"/>
+                                    <Label HorizontalOptions="Start" TextColor="#1c2606" Opacity="0.6" Margin="8, 0, 0, 0" Text="{Binding UsageType}"/>
+                                </StackLayout>
+                                <Label Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" FontSize="Medium" TextColor="#1c2606" Margin="0, 0, 8, 0" Text="{Binding AddressInfo.Distance, StringFormat='{0:F2} km'}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btnBack" Text="BACK" TextColor="#f0f2f0" BackgroundColor="#6c735d" Margin="0, 8, 0, 8" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

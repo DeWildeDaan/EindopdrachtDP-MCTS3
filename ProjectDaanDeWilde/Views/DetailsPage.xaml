@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectDaanDeWilde.Views.DetailsPage"
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#f0f2f0">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="12"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="12"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" x:Name="lblTitle" FontSize="Large"  Margin="8, 16, 0, 0" TextColor="#1c2606" Text="Title"/>
+                    <Label Grid.Row="0" Grid.Column="1" x:Name="lblDistance" FontSize="Large" HorizontalOptions="End" Margin="0, 16, 8, 0" TextColor="#1c2606" Text="Distance"/>
+                    <Label Grid.Row="1" Grid.Column="0" x:Name="lblChargers" Margin="8, 8, 0, 0" TextColor="#1c2606" Text="Chargers"/>
+                    <Label Grid.Row="1" Grid.Column="1" x:Name="lblStatus" HorizontalOptions="End" Margin="0, 8, 8, 0" TextColor="#1c2606" Text="Status"/>
+                    <Label Grid.Row="2" Grid.Column="1" x:Name="lblUsage" HorizontalOptions="End" Margin="0, 0, 8, 0" TextColor="#1c2606" Text="Usagetype"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" FontSize="Medium" Margin="8, 16, 0, 0" TextColor="#1c2606" Text="Connections"/>
+                    <Label Grid.Row="3" Grid.Column="1" FontSize="Medium" HorizontalOptions="End" Margin="0, 16, 8, 0" TextColor="#1c2606" Text="Quantity"/>
+                </Grid>
+
+                <BoxView Grid.Row="1" Margin="8, 8, 8, 0" BackgroundColor="#6C735D"/>
+
+                <ListView Grid.Row="2" x:Name="lvwConnections" VerticalOptions="Start" SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" VerticalOptions="Center" HorizontalTextAlignment="Start" Margin="8" TextColor="#1c2606" Text="{Binding ConnectionType}"/>
+                                    <Label Grid.Column="1" VerticalOptions="Center" HorizontalTextAlignment="End" Margin="0,0,8,0" TextColor="#1c2606" Text="{Binding Quantity}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <BoxView Grid.Row="3" Margin="8, 8, 8, 0" BackgroundColor="#6C735D"/>
+
+                <Label Grid.Row="4" FontSize="Medium" Margin="8, 8, 0, 0" TextColor="#1c2606" Text="Comments"/>
+
+                <ListView Grid.Row="5" x:Name="lvwComments" RowHeight="100">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="8" TextColor="#1c2606" FontSize="Small" Text="{Binding UserName}"/>
+                                        <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,8,0" TextColor="#1c2606" FontSize="Small" Text="{Binding Date}"/>
+                                    </Grid>
+                                    <Label  Grid.Row="1" VerticalOptions="Start" Margin="8" TextColor="#1c2606" FontSize="Medium" Text="{Binding CommentText}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Grid Grid.Row="6" VerticalOptions="End">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="entComment" Grid.Column="0" VerticalOptions="Center" TextColor="#1c2606" PlaceholderColor="#1c2606" Margin="8" Placeholder="Add a comment..." />
+                    <Button x:Name="btnPost" Grid.Column="1" VerticalOptions="Center" Margin="0,0,8,0" Text="Post" TextColor="#f0f2f0" BackgroundColor="#6c735d"/>
+                </Grid>
+
+                <Button x:Name="btnBack" Grid.Row="7" Text="BACK" TextColor="#f0f2f0" BackgroundColor="#6c735d" Margin="8" />
+                
+            </Grid>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

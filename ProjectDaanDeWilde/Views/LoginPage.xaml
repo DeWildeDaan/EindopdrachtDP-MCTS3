@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectDaanDeWilde.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#f0f2f0">
+    <ContentPage.Content>
+        <StackLayout Margin="16" Spacing="0" VerticalOptions="Center">
+            <Label FontAttributes="Bold" Text="Login" FontSize="Medium" TextColor="#1c2606" />
+            <Frame OutlineColor="#9ca692" Margin="2,16" Padding="16,0">
+                <StackLayout Spacing="0">
+                    <Grid RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="User" FontAttributes="Bold" TextColor="#1c2606" VerticalOptions="Center" />
+                        <Entry x:Name="entUser" TextColor="#1c2606" Grid.Column="1" Placeholder="Username"/>
+                    </Grid>
+                    <Grid RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Email" FontAttributes="Bold" TextColor="#1c2606" VerticalOptions="Center" />
+                        <Entry x:Name="entEmail" TextColor="#1c2606" Grid.Column="1" Placeholder="Email address"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <Button x:Name="btnLogin" Text="Login" TextColor="#f0f2f0" BackgroundColor="#6c735d" Margin="0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
